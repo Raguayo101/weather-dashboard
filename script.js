@@ -41,20 +41,24 @@ function getWeather(userInput) {
             data.list[i].dt_txt
           ).toLocaleDateString();
 
-          var imgEl = document.createElement('img');
-          imgEl.setAttribute(
-            'src',
-            `http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png`
-          );
-
-          var p1El = document.createElement('p');
+          var tempTextEl = document.createElement('p');
           p1El.classList.add('card-text');
           p1El.textContent = `Temp: ${data.list[i].main.temp_max} °F`;
 
-          var p2El = document.createElement('p');
+          var humidityTextEl = document.createElement('p');
           p2El.classList.add('card-text');
           p2El.textContent = `Humidity: ${data.list[i].main.humidity}%`;
         }
+        // merge it all together
+        columnEl.appendChild(cardEl);
+        bodyEl.appendChild(titleEl);
+        bodyEl.appendChild(windsEl);
+        bodyEl.appendChild(humidityEl);
+        bodyEl.appendChild(tempTextEl);
+        bodyEl.appendChild(humidityTextEl);
+        cardEl.appendChild(bodyEl);
+        weatherEl.appendChild(columnEl);
       }
     });
 }
+
