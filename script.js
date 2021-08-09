@@ -1,3 +1,5 @@
+
+
 // trying to get our forcast
 function getWeather(userInput) {
   if (!userInput) {
@@ -62,3 +64,11 @@ function getWeather(userInput) {
     });
 }
 
+// attemping to get local storage saved
+this.addEventListener('load' function(){
+    if(!json.parse(this.localStorage.getItem('current'))){
+        currentHistory = [];
+    } else {
+        currentHistory = JSON.parse(this.localStorage.getItem('current'));
+    }
+});
