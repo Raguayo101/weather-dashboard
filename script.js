@@ -88,7 +88,7 @@ window.addEventListener('load', () => {
   const grabUVIndex = (lat, lon) => {
 
     fetch(
-      `http://api.openweathermap.org/data/2.5/uvi?appid=d91f911bcf2c0f925fb6535547a5ddc9&lat=${lat}&lon=${lon}`
+      `http://api.openweathermap.org/data/2.5/uvi?appid=cd979f38b9769fc27e8605c58c631c3d&lat=${lat}&lon=${lon}`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -129,7 +129,7 @@ window.addEventListener('load', () => {
 
   const searchWeather = (searchInput) => {
 
-    var endpointUrl = `http://api.openweathermap.org/data/2.5/weather?q=${searchInput}&appid=d91f911bcf2c0f925fb6535547a5ddc9&units=imperial`;
+    var endpointUrl = `http://api.openweathermap.org/data/2.5/weather?q=${searchInput}&appid=cd979f38b9769fc27e8605c58c631c3d&units=imperial`;
     fetch(endpointUrl)
       .then((response) => response.json())
       .then((data) => {
