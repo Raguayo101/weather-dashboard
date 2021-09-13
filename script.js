@@ -15,7 +15,7 @@ window.addEventListener('load', () => {
     if (!userInput) {
       return;
     }
-    var apiEndPoint = `http://api.openweathermap.org/data/2.5/forecast?q=${userInput}&appid=cd979f38b9769fc27e8605c58c631c3d&units=imperial`;
+    var apiEndPoint = `https://api.openweathermap.org/data/2.5/forecast?q=${userInput}&appid=cd979f38b9769fc27e8605c58c631c3d&units=imperial`;
     fetch(apiEndPoint)
       .then((res) => res.json())
       .then((data) => {
@@ -55,7 +55,7 @@ window.addEventListener('load', () => {
             var imgEl = document.createElement('img');
             imgEl.setAttribute(
               'src',
-              `http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png`
+              `https://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png`
             )
 
             var pOneEl = document.createElement('p');
@@ -88,7 +88,7 @@ window.addEventListener('load', () => {
   const grabUVIndex = (lat, lon) => {
 
     fetch(
-      `http://api.openweathermap.org/data/2.5/uvi?appid=cd979f38b9769fc27e8605c58c631c3d&lat=${lat}&lon=${lon}`
+      `https://api.openweathermap.org/data/2.5/uvi?appid=cd979f38b9769fc27e8605c58c631c3d&lat=${lat}&lon=${lon}`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -129,7 +129,7 @@ window.addEventListener('load', () => {
 
   const searchWeather = (searchInput) => {
 
-    var endpointUrl = `http://api.openweathermap.org/data/2.5/weather?q=${searchInput}&appid=cd979f38b9769fc27e8605c58c631c3d&units=imperial`;
+    var endpointUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput}&appid=cd979f38b9769fc27e8605c58c631c3d&units=imperial`;
     fetch(endpointUrl)
       .then((response) => response.json())
       .then((data) => {
@@ -163,7 +163,7 @@ window.addEventListener('load', () => {
         var imgEl = document.createElement('img');
         imgEl.setAttribute(
           'src',
-          `http://openweathermap.org/img/w/${data.weather[0].icon}.png`
+          `https://openweathermap.org/img/w/${data.weather[0].icon}.png`
         )
 
         // now we want to append it all to our page so it will show! 
