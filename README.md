@@ -1,7 +1,6 @@
 Weather Dashboard
 
-
-<img src = "images/website.png" alt="photo of site">
+<img src = "images/webpage_screen_shot.png" alt="photo of site">
 
 ## Table of Contents:
 
