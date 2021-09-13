@@ -122,8 +122,8 @@ window.addEventListener('load', () => {
       var newHistory = [...currentEntries, his];
       localStorage.setItem('previous-search', JSON.stringify(newHistory));
     } else {
-      historyItems.push(his);
-      localStorage.setItem('previous-search', JSON.stringify(historyItems));
+      itemHistory.push(his);
+      localStorage.setItem('previous-search', JSON.stringify(itemHistory));
     }
   }
 
