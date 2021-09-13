@@ -1,6 +1,5 @@
 Weather Dashboard
-https://raguayo101.github.io/weather-dashboard/
-https://github.com/Raguayo101/weather-dashboard
+
 
 <img src = "images/website.png" alt="photo of site">
 
